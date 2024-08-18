@@ -1,0 +1,29 @@
+<div class="personajes-container">
+  <mat-card *ngFor="let personaje of personajes" class="personaje-card">
+    <div class="card-content">
+      <img mat-card-image [src]="personaje.image" alt="{{ personaje.name }}">
+      <mat-card-content>
+        <h3>
+          {{ personaje.id }} - {{ personaje.name }} - {{ personaje.species }}
+        </h3>
+        <p>
+          <span [ngStyle]="getStatusStyles(personaje.status)"></span>
+          Status: {{ personaje.status }}
+        </p>
+        <p>Gender: {{ personaje.gender }}</p>
+        <p><strong>Last known location:</strong></p>
+        <p>{{ personaje.location.name }}</p>
+        <p><strong>First seen in:</strong></p>
+        <p>{{ personaje.origin.name }}</p>
+      </mat-card-content>
+    </div>
+  </mat-card>
+
+  <div class="paginator-container">
+    <mat-paginator [length]="totalCharacters"
+                   [pageSize]="20"
+                   [pageSizeOptions]="[20]"
+                   (page)="onPageChange($event)">
+    </mat-paginator>
+  </div>
+  

@@ -1,0 +1,24 @@
+.episodios-container {
+    padding: 20px;
+    background-color: #2c2c2c;
+    border-radius: 8px;
+    color: white;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  th.mat-header-cell, td.mat-cell {
+    color: white;
+  }
+  
+  th.mat-header-cell {
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  td.mat-cell {
+    padding: 8px 16px;
+  }
+  
